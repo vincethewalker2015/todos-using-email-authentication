@@ -8,9 +8,9 @@
             <p><span class="descriptionText">Description:</span> <%= @todo.description %></p>
              <p>
                <% if logged_in? && (current_user == @todo.user || current_user.admin?) %>
-                <%= link_to "Edit This To Do", edit_todo_path(@todo), class: "btn btn-primary" %> 
+                <%= link_to "Edit This To Do", edit_todo_path(@todo), class: "btn btn-primary bttn" %> 
               <% end %>
-              <%= link_to "Back to Index", todos_path, class: "btn btn-warning" %>
+              <%= link_to "Back to Index", todos_path, class: "btn btn-warning bttn" %>
             </p>
         </div>
       </div>
