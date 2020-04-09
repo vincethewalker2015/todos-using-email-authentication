@@ -14,6 +14,12 @@
           </ul>
          
           <ul class="nav navbar-nav navbar-right">
+          <% if logged_in? && (current_user || current_user.admin?) %>
+            <%= link_to "Log out", login_path, method: :delete, class: "btn btn-default btn-lg fancy" %>
+                                                                     
+          <% else %>
+            <li><%= link_to "Log In", login_path, class: "btn btn-default btn-lg fancy" %></li>
+          <% end %>
             <li><%= link_to "Create a To Do", new_todo_path %></li>
             <li><%= link_to "To Do List", todos_path %></li>
           </ul> 
